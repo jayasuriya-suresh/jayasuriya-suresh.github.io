@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Jaya Suriya Suresh, MSc Supply Chain Management student at NEOMA Business School: experience, projects and skills.">
+<title>Jaya Suriya Suresh</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a shipment-tracking sheet. Narrow reading column, a route line for the career timeline, and a manifest grid for projects. */
+:root {
+  --bg: #f3f5f4;
+  --surface: #ffffff;
+  --ink: #13222c;
+  --muted: #55646d;
+  --line: #d3dbdd;
+  --accent: #c8541c;
+  --accent-soft: #f6e4da;
+  --signal: #1f7a5a;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Source Sans 3", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f171c; --surface: #16222a; --ink: #e6ecee; --muted: #9aa9b1; --line: #2a3a44;
+    --accent: #f08a52; --accent-soft: #3a2519; --signal: #5cc79c; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f171c; --surface: #16222a; --ink: #e6ecee; --muted: #9aa9b1; --line: #2a3a44;
+  --accent: #f08a52; --accent-soft: #3a2519; --signal: #5cc79c; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--f-body); font-size: 17px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 980px; margin: 0 auto; padding-block: 48px 64px; display: grid; gap: 72px; }
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+/* Hero */
+.hero { display: grid; gap: 22px; }
+.route { display: flex; align-items: center; gap: 12px; font-family: var(--f-mono); font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+.route .code { color: var(--ink); font-weight: 600; letter-spacing: .06em; }
+.route .leg { flex: 0 1 120px; height: 0; border-top: 2px dashed var(--accent); min-width: 40px; }
+h1 { font-size: clamp(44px, 8vw, 84px); font-weight: 800; font-stretch: 85%; line-height: .95; letter-spacing: -.01em; }
+.hero .role { font-size: clamp(19px, 2.4vw, 23px); max-width: 40ch; }
+.hero .role strong { color: var(--accent); font-weight: 600; }
+.status { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: var(--accent-soft); font-family: var(--f-mono); font-size: 13px; width: fit-content; }
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--signal); }
+.contact { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 16px; align-items: center; }
+.contact .mail { font-family: var(--f-mono); font-size: 14px; user-select: all; }
+.copy { font-family: var(--f-mono); font-size: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); padding: 4px 10px; border-radius: 4px; cursor: pointer; }
+.copy:hover { border-color: var(--accent); }
+
+/* Key figures */
+.figures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); }
+.fig { padding: 18px 16px 18px 0; display: grid; gap: 4px; }
+.fig + .fig { padding-left: 16px; border-left: 1px solid var(--line); }
+.fig b { font-family: var(--f-display); font-size: 34px; font-weight: 700; font-stretch: 90%; line-height: 1; font-variant-numeric: tabular-nums; }
+.fig span { font-size: 14px; color: var(--muted); line-height: 1.35; }
+
+section { display: grid; gap: 28px; }
+.sec-head { display: grid; gap: 6px; }
+h2 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; font-stretch: 90%; }
+
+/* Career route */
+.track { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.stop { display: grid; grid-template-columns: 150px 28px minmax(0, 1fr); gap: 0 14px; }
+.stop .when { font-family: var(--f-mono); font-size: 13px; color: var(--muted); padding-top: 5px; text-align: right; }
+.stop .rail { position: relative; display: flex; justify-content: center; }
+.stop .rail::before { content: ""; position: absolute; top: 0; bottom: 0; width: 2px; background: var(--line); }
+.stop:first-child .rail::before { top: 12px; }
+.stop:last-child .rail::before { bottom: auto; height: 12px; }
+.stop .dot { position: relative; margin-top: 7px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 3px solid var(--ink); }
+.stop.now .dot { border-color: var(--accent); background: var(--accent); }
+.stop .body { padding-bottom: 34px; display: grid; gap: 8px; min-width: 0; }
+.stop h3 { font-size: 22px; font-weight: 700; font-stretch: 95%; }
+.stop .org { color: var(--muted); font-size: 16px; }
+.stop ul { margin: 4px 0 0; padding-left: 18px; display: grid; gap: 6px; }
+.stop li::marker { color: var(--accent); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.chip { font-family: var(--f-mono); font-size: 12px; padding: 3px 8px; border: 1px solid var(--line); border-radius: 4px; color: var(--muted); }
+
+/* Projects manifest */
+.manifest { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.item { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 22px; display: grid; gap: 10px; align-content: start; }
+.item.lead { grid-column: 1 / -1; border-top: 4px solid var(--accent); }
+.item .ref { font-family: var(--f-mono); font-size: 12px; color: var(--accent); letter-spacing: .06em; }
+.item h3 { font-size: 21px; font-weight: 700; font-stretch: 95%; }
+.item p { color: var(--ink); }
+.item .result { font-size: 15px; color: var(--muted); }
+.item .open { font-weight: 600; width: fit-content; }
+
+/* Education */
+.edu { display: grid; gap: 22px; }
+.deg { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 6px 28px; padding-top: 18px; border-top: 1px solid var(--line); }
+.deg .when { font-family: var(--f-mono); font-size: 13px; color: var(--muted); padding-top: 4px; }
+.deg h3 { font-size: 20px; font-weight: 700; font-stretch: 95%; }
+.deg .school { color: var(--muted); }
+.deg .courses { font-size: 15px; color: var(--muted); }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.skill { display: grid; gap: 10px; align-content: start; }
+.skill h3 { font-size: 15px; font-family: var(--f-mono); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.skill ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.skill li { padding-bottom: 6px; border-bottom: 1px dashed var(--line); }
+
+footer { display: grid; gap: 14px; padding-top: 28px; border-top: 2px solid var(--ink); }
+footer h2 { font-size: 30px; }
+footer .note { color: var(--muted); font-size: 15px; }
+
+@media (max-width: 720px) {
+  .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fig:nth-child(3) { padding-left: 0; border-left: 0; }
+  .fig:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .stop { grid-template-columns: 22px minmax(0, 1fr); }
+  .stop .when { grid-column: 2; grid-row: 1; text-align: left; padding-top: 0; }
+  .stop .rail { grid-column: 1; grid-row: 1 / span 2; }
+  .stop .body { grid-column: 2; }
+  .manifest, .skills { grid-template-columns: minmax(0, 1fr); }
+  .deg { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .route .leg { background: none; animation: dash 2.4s ease-out 1; }
+  @keyframes dash { from { border-top-color: transparent; } to { border-top-color: var(--accent); } }
+}
+
+/* Data projects with inline charts */
+.manifest { grid-template-columns: minmax(0, 1fr); }
+.item.data { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.copy-col { display: grid; gap: 10px; min-width: 0; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding-block: 6px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.stats div { display: grid; gap: 2px; }
+.stats b { font-family: var(--f-display); font-size: 24px; font-weight: 700; font-stretch: 90%; font-variant-numeric: tabular-nums; }
+.stats span { font-size: 13px; color: var(--muted); line-height: 1.3; }
+.chart-col { margin: 0; display: grid; gap: 8px; min-width: 0; }
+.chart-col figcaption { font-family: var(--f-mono); font-size: 12px; color: var(--muted); letter-spacing: .03em; }
+.chart svg { width: 100%; height: auto; display: block; overflow: visible; }
+.chart text { font-family: var(--f-mono); font-size: 11px; fill: var(--muted); }
+.chart .val { fill: var(--ink); font-weight: 600; }
+.chart .pos { fill: var(--ink); }
+.chart .neg { fill: var(--accent); }
+.chart .c1 { fill: var(--muted); opacity: .45; }
+.chart .c2 { fill: var(--accent); }
+.chart .h { fill: var(--ink); opacity: .75; }
+.chart .hpk { fill: var(--accent); }
+.chart .axis { stroke: var(--line); stroke-width: 1; }
+.legend { display: flex; gap: 6px 14px; align-items: center; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+.legend .k { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: -8px; }
+.legend .k1 { background: var(--muted); opacity: .45; }
+.legend .k2 { background: var(--accent); }
+@media (max-width: 720px) { .item.data { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header class="hero">
+    <div class="route" aria-label="From Chennai, India to Rouen, France">
+      <span class="code">MAA</span> Chennai <span class="leg" aria-hidden="true"></span> <span class="code">URO</span> Rouen
+    </div>
+    <h1>Jaya Suriya Suresh</h1>
+    <p class="role">Supply chain master’s student at NEOMA Business School, with <strong>1 year 6 months</strong> coordinating dispatches, stock and deliveries on a production site.</p>
+    <p class="status">Available for a 6-month internship from January 2027</p>
+    <div class="contact">
+      <span class="mail" id="mail">Jayasuriya.0904@gmail.com</span>
+      <button class="copy" id="copy" type="button">Copy email</button>
+      <a href="https://linkedin.com/in/jaya-suriya-s" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="Jaya_Suriya_Suresh_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+      <span>+33 7 45 54 22 53</span>
+    </div>
+  </header>
+
+  <div class="figures" aria-label="Key figures">
+    <div class="fig"><b>~15%</b><span>fewer late deliveries after new order-to-delivery procedures</span></div>
+    <div class="fig"><b>≤10</b><span>truck dispatches coordinated per day</span></div>
+    <div class="fig"><b>5–10</b><span>SKUs balanced daily against stock and orders</span></div>
+    <div class="fig"><b>6</b><span>KPIs tracked in my Power BI retail dashboard</span></div>
+  </div>
+
+  <section id="experience" aria-labelledby="exp-title">
+    <div class="sec-head">
+      <span class="label">Route so far</span>
+      <h2 id="exp-title">Experience and studies</h2>
+    </div>
+    <ol class="track">
+      <li class="stop now">
+        <div class="when">2026 – now</div>
+        <div class="rail"><span class="dot"></span></div>
+        <div class="body">
+          <h3>MSc Supply Chain Management</h3>
+          <p class="org">NEOMA Business School, Rouen</p>
+          <p>Dissertation in progress on facility location in collaborative supply chains: a MILP model where several companies decide together where to open shared warehouses, with fair cost sharing (Shapley value).</p>
+        </div>
+      </li>
+      <li class="stop">
+        <div class="when">2025 – 2026</div>
+        <div class="rail"><span class="dot"></span></div>
+        <div class="body">
+          <h3>International Pre-Master</h3>
+          <p class="org">NEOMA Business School, Rouen</p>
+        </div>
+      </li>
+      <li class="stop">
+        <div class="when">Mar 2024 – Aug 2025</div>
+        <div class="rail"><span class="dot"></span></div>
+        <div class="body">
+          <h3>Supply Chain Coordinator</h3>
+          <p class="org">S.P.S Blue Metals, construction aggregates, India · 1 year 6 months</p>
+          <ul>
+            <li>Cut late deliveries by about 15% by analysing order and delivery data in Excel, then leading corrective actions and new order-to-delivery procedures.</li>
+            <li>Coordinated up to 10 truck dispatches a day between quarry production, 3 transport partners and a core portfolio of B2B clients.</li>
+            <li>Balanced demand and supply daily across 5–10 SKUs, comparing SKU-level stock and production with incoming orders.</li>
+            <li>Built weekly KPI reports in Excel (dispatch volumes, on-time delivery, delays) used by management to prioritise orders.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="stop">
+        <div class="when">Oct – Dec 2023</div>
+        <div class="rail"><span class="dot"></span></div>
+        <div class="body">
+          <h3>Data Analytics Certification</h3>
+          <p class="org">Skill Spire Technologies, Chennai · 3 applied projects, shown below</p>
+        </div>
+      </li>
+      <li class="stop">
+        <div class="when">Dec 2022 – Feb 2023</div>
+        <div class="rail"><span class="dot"></span></div>
+        <div class="body">
+          <h3>HR Intern</h3>
+          <p class="org">L&amp;T Construction, Chennai · 3 months</p>
+          <ul>
+            <li>Coordinated sourcing, screening and interviews with hiring managers for 20+ candidates.</li>
+            <li>Ran onboarding and training sessions and documented the hiring process.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="stop">
+        <div class="when">2020 – 2023</div>
+        <div class="rail"><span class="dot"></span></div>
+        <div class="body">
+          <h3>Bachelor of Business Administration</h3>
+          <p class="org">SRM University, Chennai · CGPA 8.17/10</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="projects" aria-labelledby="proj-title">
+    <div class="sec-head">
+      <span class="label">Manifest</span>
+      <h2 id="proj-title">Projects</h2>
+    </div>
+    <div class="manifest">
+      <article class="item lead">
+        <span class="ref">Research · MSc dissertation</span>
+        <h3>Facility location in collaborative supply chains</h3>
+        <p>A mixed-integer linear programming model in which partner companies choose shared warehouse locations and customer allocations at the lowest facility and transport cost. I compare collaborative and stand-alone scenarios and test fair cost-allocation methods to give managers clear rules for sharing savings.</p>
+        <div class="chips"><span class="chip">MILP</span><span class="chip">Network design</span><span class="chip">Shapley value</span><span class="chip">Optimisation</span></div>
+      </article>
+      <article class="item data">
+        <div class="copy-col">
+          <span class="ref">Dashboard · Power BI</span>
+          <h3>Retail sales performance</h3>
+          <p>Combined 3 retail data sources (orders, products, customers) into a 4-page dashboard tracking 6 KPIs on sales, profit and product performance, 2014–2017.</p>
+          <div class="stats">
+            <div><b>$2.29M</b><span>total sales</span></div>
+            <div><b>12.4%</b><span>profit margin</span></div>
+            <div><b>+20%</b><span>sales growth in 2017</span></div>
+          </div>
+          <p class="result">Finding: order lines discounted above 20% lost $134.5K in total. Capping discounts and reviewing Tables before reordering are the quickest ways to raise profit.</p>
+          <div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span><span class="chip">Excel</span></div>
+        </div>
+        <figure class="chart-col">
+          <figcaption>Profit by discount level, 2014–2017 (US$)</figcaption>
+          <div class="chart" id="ch-discount" role="img" aria-label="Profit by discount level: no discount 318,861 dollars; 1 to 20 percent 100,153; 21 to 40 percent minus 35,623; over 40 percent minus 98,926."></div>
+        </figure>
+      </article>
+      <article class="item data">
+        <div class="copy-col">
+          <span class="ref">Analysis · SQL</span>
+          <h3>Customer segmentation for stock allocation</h3>
+          <p>Joined order-item and product tables in SQL (Google BigQuery) to score 27,519 e-commerce customers on recency, frequency and spend, and split them into 5 RFM segments.</p>
+          <div class="stats">
+            <div><b>27,519</b><span>customers scored</span></div>
+            <div><b>33%</b><span>of customers…</span></div>
+            <div><b>67%</b><span>…bring in this share of revenue</span></div>
+          </div>
+          <p class="result">Finding: Champions and Loyal customers drive two thirds of revenue, so stock for the products they buy should be protected first.</p>
+          <div class="chips"><span class="chip">SQL</span><span class="chip">BigQuery</span><span class="chip">Excel</span></div>
+        </div>
+        <figure class="chart-col">
+          <figcaption>Share of customers vs share of revenue, by segment</figcaption>
+          <div class="legend"><span class="k k1"></span>Customers <span class="k k2"></span>Revenue</div>
+          <div class="chart" id="ch-rfm" role="img" aria-label="Loyal: 19 percent of customers, 38.3 percent of revenue. Champions: 14.1 and 29.1. Promising: 25.9 and 12.7. Hibernating: 30.2 and 11.4. At risk: 10.8 and 8.5."></div>
+        </figure>
+      </article>
+      <article class="item data">
+        <div class="copy-col">
+          <span class="ref">Analysis · Python</span>
+          <h3>Product demand trends</h3>
+          <p>Cleaned one month (31 days) of smart-device usage data from 33 users across 18 CSV files with Pandas, then mapped daily and hourly demand patterns.</p>
+          <div class="stats">
+            <div><b>33</b><span>users</span></div>
+            <div><b>18</b><span>CSV files cleaned</span></div>
+            <div><b>17–19h</b><span>peak activity window</span></div>
+          </div>
+          <p class="result">Finding: activity climbs from 7h and peaks in the early evening, which led to 3 inventory and distribution recommendations.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span></div>
+        </div>
+        <figure class="chart-col">
+          <figcaption>Average steps per hour of the day, all users</figcaption>
+          <div class="chart" id="ch-hourly" role="img" aria-label="Average steps per hour: lowest around 3h with 6 steps, rising from 7h, peak at 18h with 599 steps."></div>
+        </figure>
+      </article>
+      <article class="item">
+        <span class="ref">Operations · S.P.S Blue Metals</span>
+        <h3>Late-delivery reduction</h3>
+        <p>Analysed order and delivery data in Excel to find why deliveries ran late, then introduced corrective actions and new order-to-delivery procedures.</p>
+        <p class="result">Late deliveries fell by about 15%.</p>
+        <div class="chips"><span class="chip">Root-cause analysis</span><span class="chip">Excel</span><span class="chip">KPIs</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="education" aria-labelledby="edu-title">
+    <div class="sec-head">
+      <span class="label">Coursework</span>
+      <h2 id="edu-title">What I study</h2>
+    </div>
+    <div class="edu">
+      <div class="deg">
+        <div class="when">2026 – now</div>
+        <div>
+          <h3>MSc Supply Chain Management</h3>
+          <p class="courses">Supply Chain Modelling · Strategic Supply Chain Management · Transportation and Logistics · Strategic Purchasing · International Procurement · Information Systems for SCM · Efficient Production &amp; Operations · Python for SCM · Green Supply Chain</p>
+        </div>
+      </div>
+      <div class="deg">
+        <div class="when">2025 – 2026</div>
+        <div>
+          <h3>International Pre-Master</h3>
+          <p class="courses">Supply Chain Foundations · Optimization Tools for Supply Chain · Predictive Analytics · Algorithmic Thinking · Financial Analysis · Cross-Cultural Management</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" aria-labelledby="skills-title">
+    <div class="sec-head">
+      <span class="label">Toolkit</span>
+      <h2 id="skills-title">Skills</h2>
+    </div>
+    <div class="skills">
+      <div class="skill">
+        <h3>Supply chain</h3>
+        <ul><li>Demand and supply planning</li><li>SKU-level inventory</li><li>Transport coordination</li><li>Network design (MILP)</li><li>Root-cause analysis</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Data and tools</h3>
+        <ul><li>Advanced Excel</li><li>Power BI (DAX, Power Query)</li><li>SQL (BigQuery)</li><li>Python (Pandas, Matplotlib)</li><li>SAP (ERP), MS Office</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Languages</h3>
+        <ul><li>English, fluent</li><li>French, A2 and actively learning</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h2>Let’s talk about your supply chain</h2>
+    <p>I am looking for a 6-month supply chain internship from January 2027, in France, Belgium, the Netherlands, Luxembourg or Germany.</p>
+    <div class="contact">
+      <span class="mail">Jayasuriya.0904@gmail.com</span>
+      <a href="https://linkedin.com/in/jaya-suriya-s" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</main>
+
+<script>
+(function () {
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, text) { var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; return e; }
+  function money(v) { var a = Math.abs(v), s = v < 0 ? '−$' : '$'; return s + (a >= 1000 ? Math.round(a / 1000) + 'K' : a); }
+
+  // Profit by discount band: horizontal bars around a zero line
+  (function () {
+    var d = [['No discount', 318861], ['1–20%', 100153], ['21–40%', -35623], ['Over 40%', -98926]];
+    var W = 420, lab = 92, rowH = 40, H = d.length * rowH + 10, min = -175000, max = 320000;
+    var x = function (v) { return lab + (v - min) / (max - min) * (W - lab - 52); };
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H });
+    svg.appendChild(el('line', { x1: x(0), x2: x(0), y1: 0, y2: H - 6, class: 'axis' }));
+    d.forEach(function (r, i) {
+      var y = i * rowH + 8, x0 = x(Math.min(0, r[1])), w = Math.abs(x(r[1]) - x(0));
+      svg.appendChild(el('text', { x: 0, y: y + 17 }, r[0]));
+      svg.appendChild(el('rect', { x: x0, y: y + 4, width: Math.max(w, 1), height: 20, rx: 2, class: r[1] < 0 ? 'neg' : 'pos' }));
+      var tx = r[1] < 0 ? x0 - 6 : x0 + w + 6;
+      svg.appendChild(el('text', { x: tx, y: y + 18, 'text-anchor': r[1] < 0 ? 'end' : 'start', class: 'val' }, money(r[1])));
+    });
+    document.getElementById('ch-discount').appendChild(svg);
+  })();
+
+  // RFM: paired bars, share of customers vs share of revenue
+  (function () {
+    var d = [['Loyal', 19.0, 38.3], ['Champions', 14.1, 29.1], ['Promising', 25.9, 12.7], ['Hibernating', 30.2, 11.4], ['At risk', 10.8, 8.5]];
+    var W = 420, lab = 92, rowH = 44, H = d.length * rowH, max = 40;
+    var sx = function (v) { return v / max * (W - lab - 48); };
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H });
+    d.forEach(function (r, i) {
+      var y = i * rowH + 4;
+      svg.appendChild(el('text', { x: 0, y: y + 20 }, r[0]));
+      svg.appendChild(el('rect', { x: lab, y: y + 4, width: sx(r[1]), height: 14, rx: 2, class: 'c1' }));
+      svg.appendChild(el('text', { x: lab + sx(r[1]) + 6, y: y + 15 }, r[1].toFixed(1) + '%'));
+      svg.appendChild(el('rect', { x: lab, y: y + 20, width: sx(r[2]), height: 14, rx: 2, class: 'c2' }));
+      svg.appendChild(el('text', { x: lab + sx(r[2]) + 6, y: y + 31, class: 'val' }, r[2].toFixed(1) + '%'));
+    });
+    document.getElementById('ch-rfm').appendChild(svg);
+  })();
+
+  // Hourly demand: 24 columns, peak hours highlighted
+  (function () {
+    var d = [42, 23, 17, 6, 13, 44, 179, 306, 428, 433, 482, 457, 549, 538, 541, 406, 497, 550, 599, 583, 354, 308, 238, 122];
+    var W = 420, H = 200, top = 18, base = 172, max = 600, bw = W / 24;
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H });
+    [200, 400, 600].forEach(function (t) {
+      var y = base - t / max * (base - top);
+      svg.appendChild(el('line', { x1: 0, x2: W, y1: y, y2: y, class: 'axis', 'stroke-dasharray': '2 4' }));
+      svg.appendChild(el('text', { x: 0, y: y - 3 }, t));
+    });
+    d.forEach(function (v, h) {
+      var hgt = v / max * (base - top), peak = h >= 17 && h <= 19;
+      svg.appendChild(el('rect', { x: h * bw + 2, y: base - hgt, width: bw - 4, height: Math.max(hgt, 1), rx: 1.5, class: peak ? 'hpk' : 'h' }));
+      if (h % 3 === 0) svg.appendChild(el('text', { x: h * bw + bw / 2, y: base + 16, 'text-anchor': 'middle' }, h + 'h'));
+    });
+    svg.appendChild(el('line', { x1: 0, x2: W, y1: base, y2: base, class: 'axis' }));
+    svg.appendChild(el('text', { x: 18 * bw + bw / 2, y: base - 599 / max * (base - top) - 6, 'text-anchor': 'middle', class: 'val' }, '599'));
+    document.getElementById('ch-hourly').appendChild(svg);
+  })();
+})();
+</script>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var mail = document.getElementById('mail');
+  btn.addEventListener('click', function () {
+    var text = mail.textContent.trim();
+    var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy email'; }, 1600); };
+    var fallback = function () {
+      var r = document.createRange(); r.selectNodeContents(mail);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected, press Ctrl+C';
+    };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else { fallback(); }
+    } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>
